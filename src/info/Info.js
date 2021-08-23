@@ -50,16 +50,16 @@ export default function Info() {
                         return (
                             <div key={index}>
                                 <div className="card">
-                                    name : {k.name}&nbsp;|&nbsp;
-                                    age : {k.age}&nbsp;|&nbsp;
-                                    gender : {k.gender}
-                                    <button className="vtn" onClick={ () => setInfo(a => a.filter(( ele , i ) => index!==i)) }>del</button>
-                                    <button className="vtn" onClick={() => {
+                                    Name : {k.name}&nbsp;|&nbsp;
+                                    Age : {k.age}&nbsp;|&nbsp;
+                                    Gender : {k.gender}
+                                    <button className="vtn del" onClick={ () => setInfo(a => a.filter(( ele , i ) => index!==i)) }>Delete</button>
+                                    <button className="vtn upd" onClick={() => {
                                         const b = info.filter((d , e) => index===e);
                                         setNam({name:b[0].name , age:parseInt(b[0].age) , gender:b[0].gender});
                                         setInd(index);
                                         setStatus(1);
-                                    }}>edit</button>
+                                    }}>Edit</button>
                                 </div>
                             </div>
                         );
